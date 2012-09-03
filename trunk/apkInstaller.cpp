@@ -22,9 +22,9 @@ void main()
 	if (!dir.empty()) //if not in right directory, change to it
 		_chdir(dir.c_str());
 
-	system("dir /b *.apk > install.txt"); //create install.txt with .apk names
+	system("dir /b *.apk > install"); //create install.txt with .apk names
 
-	fin.open("install.txt");
+	fin.open("install");
 	while (getline(fin,apkName))
 	{
 		apkName.insert(apkName.begin(),'\"'); apkName.insert(apkName.end(),'\"');
@@ -32,6 +32,6 @@ void main()
 		system(command.c_str());
 	}
 	fin.close(); fin.clear();
-	system("del install.txt");
+	system("del install");
 	cout << "\nComplete";
 }
