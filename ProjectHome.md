@@ -1,0 +1,1 @@
+This is a batch installer for Android apk's. It uses very little code in combination with ADB to install apk's from a specified directory. Works only on Windows.
